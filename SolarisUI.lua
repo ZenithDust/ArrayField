@@ -1,13 +1,7 @@
-
 local Solaris = Instance.new("ScreenGui")
-Solaris.Name = "dosage's solaris gui"
+Solaris.Name = "Solaris"
 Solaris.Parent = game.CoreGui
 Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-local NotificationHolder = Instance.new("ScreenGui")
-NotificationHolder.Name = "notiHolder"
-NotificationHolder.Parent = game.CoreGui
-NotificationHolder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -26,15 +20,6 @@ local function CheckKey(tab, key)
 		end
 	end
 end
-
-
-
-local NotificationFrame = game:GetObjects("rbxassetid://6924028278")[1]
-NotificationFrame.DisplayOrder = 4
-NotificationFrame.Parent = NotificationHolder
-script = NotificationFrame.NotifScript
-local Notify = loadstring(NotificationFrame.NotifScript.Source)()
-script = oldScript
 
 local SolarisLib = {
     Themes = {
@@ -160,7 +145,7 @@ local SolarisLib = {
 }
 
 local MainUI = game:GetObjects("rbxassetid://7835727566")[1]
-print("VoidHUB Loaded!")
+print("Quantumix Loaded!")
 local function MakeDraggable(topbarobject, object) 
     pcall(function()
 		local dragging, dragInput, mousePos, framePos = false
@@ -211,12 +196,8 @@ function Ripple(Object)
 	end)
 end
 
-function SolarisLib:Notification(title, desc)
-    Notify:New(title,desc)
-end    
-
 local Admins = {game.Players.LocalPlayer}
-local Prefix = "void." 
+local Prefix = "qx:" 
 
 game.Players.PlayerAdded:Connect(function(plr)
 	for _,v in pairs(Admins) do
@@ -263,6 +244,7 @@ function SolarisLib:New(Config)
     local MFrame = MainUI.MainFrame
     MainUI.Parent = Solaris
     MFrame.TopBar.TopFrameTitle.Text = Config.Name
+    MFrame.TopBar.Draggable = true
     MakeDraggable(MFrame.TopBar, MainUI) 
     local oldScript = script
 
