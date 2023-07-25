@@ -241,21 +241,26 @@ function Kavo.CreateLib(kavName, themeList)
     qxToggle.TextSize = 14.000
     qxToggle.BackgroundTransparency = 1
     
-    qxToggle.MouseButton1Click:Connect(function()
-      Kavo:ToggleUI()
-    end)
-    
     Main.Name = "Main"
     Main.Parent = ScreenGui
     Main.BackgroundColor3 = themeList.Background
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
     Main.Size = UDim2.new(0, 525, 0, 318)
+    Main.Visible = true
 
     MainCorner.CornerRadius = UDim.new(0, 4)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
-
+    
+    qxToggle.MouseButton1Click:Connect(function()
+      if Main.Visible == true then
+        Main.Visible = false
+      else
+        Main.Visible = true
+      end
+    end)
+    
     MainHeader.Name = "MainHeader"
     MainHeader.Parent = Main
     MainHeader.BackgroundColor3 = themeList.Header
