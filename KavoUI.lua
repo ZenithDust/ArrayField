@@ -208,7 +208,7 @@ function Kavo.CreateLib(kavName, themeList)
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
-
+    local qxToggle = Instance.new('TextButton')
     local blurFrame = Instance.new("Frame")
 
     Kavo:DraggingEnabled(MainHeader, Main)
@@ -226,7 +226,14 @@ function Kavo.CreateLib(kavName, themeList)
     ScreenGui.Name = LibName
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.ResetOnSpawn = false
-
+    
+    qxToggle.Name = "toggle"
+    qxToggle.Parent = ScreenGui
+    qxToggle.BackgroundColor3 = themeList.Background
+    qxToggle.Position = UDim2.new(0, 10, 0, 50)
+    qxToggle.Size = UDim2.new(0, 70, 0, 30)
+    qxToggle.Text = "Toggle"
+    
     Main.Name = "Main"
     Main.Parent = ScreenGui
     Main.BackgroundColor3 = themeList.Background
