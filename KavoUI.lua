@@ -230,9 +230,21 @@ function Kavo.CreateLib(kavName, themeList)
     qxToggle.Name = "toggle"
     qxToggle.Parent = ScreenGui
     qxToggle.BackgroundColor3 = themeList.Background
+    Objects[qxToggle] = "SchemeColor"
     qxToggle.Position = UDim2.new(0, 10, 0, 50)
     qxToggle.Size = UDim2.new(0, 70, 0, 30)
     qxToggle.Text = "Toggle"
+    qxToggle.AutoButtonColor = false
+    qxToggle.Font = Enum.Font.Gotham
+    qxToggle.Text = tabName
+    qxToggle.TextColor3 = themeList.TextColor
+    Objects[qxToggle] = "TextColor3"
+    qxToggle.TextSize = 14.000
+    qxToggle.BackgroundTransparency = 1
+    
+    qxToggle.MouseButton1Click:Connect(function()
+      Kavo:ToggleUI()
+    end)
     
     Main.Name = "Main"
     Main.Parent = ScreenGui
