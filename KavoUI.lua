@@ -63,6 +63,13 @@ local themeStyles = {
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(20, 20, 20)
     },
+    Quantumix {
+        SchemeColor = Color3.fromRGB(111, 117, 159),
+        Background = Color3.fromRGB(17, 18, 25),
+        Header = Color3.fromRGB(29, 30, 41),
+        TextColor = Color3.fromRGB(255, 255, 255),
+        ElementColor = Color3.fromRGB(47, 50, 70)
+    },
     LightTheme = {
         SchemeColor = Color3.fromRGB(150, 150, 150),
         Background = Color3.fromRGB(255,255,255),
@@ -229,7 +236,7 @@ function Kavo.CreateLib(kavName, themeList)
     
     qxToggle.Name = "toggle"
     qxToggle.Parent = ScreenGui
-    qxToggle.BackgroundColor3 = themeList.Background
+    qxToggle.BackgroundColor3 = themeList.SchemeColor
     Objects[qxToggle] = "SchemeColor"
     qxToggle.Position = UDim2.new(0, 10, 0, 50)
     qxToggle.Size = UDim2.new(0, 70, 0, 30)
