@@ -236,7 +236,6 @@ function Kavo.CreateLib(kavName, themeList)
     qxToggle.Text = "Toggle"
     qxToggle.AutoButtonColor = false
     qxToggle.Font = Enum.Font.Gotham
-    qxToggle.Text = tabName
     qxToggle.TextColor3 = themeList.TextColor
     Objects[qxToggle] = "TextColor3"
     qxToggle.TextSize = 14.000
