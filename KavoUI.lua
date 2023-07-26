@@ -63,7 +63,7 @@ local themeStyles = {
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(20, 20, 20)
     },
-    Quantumix {
+    Quantumix = {
         SchemeColor = Color3.fromRGB(111, 117, 159),
         Background = Color3.fromRGB(17, 18, 25),
         Header = Color3.fromRGB(29, 30, 41),
