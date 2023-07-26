@@ -160,8 +160,8 @@ function Kavo.CreateLib(kavName, themeList)
     end
     if themeList == "DarkTheme" then
         themeList = themeStyles.DarkTheme
-    elseif themeList == "Quantumix" then
-		themeList = themeStyles.Quantumix
+   elseif themeList == "Quantumix" then
+        themeList = themeStyles.Quantumix
     elseif themeList == "LightTheme" then
         themeList = themeStyles.LightTheme
     elseif themeList == "BloodTheme" then
@@ -247,7 +247,7 @@ function Kavo.CreateLib(kavName, themeList)
     qxToggle.Font = Enum.Font.Gotham
     qxToggle.TextColor3 = themeList.TextColor
     Objects[qxToggle] = "TextColor3"
-    qxToggle.TextSize = 14.000
+    qxToggle.TextSize = 13.000
     qxToggle.BackgroundTransparency = 1
     
     Main.Name = "Main"
